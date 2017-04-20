@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+
+    <header>
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ path('homepage') }}">
+                        Kalories
+                    </a>
+
+                    <button type="button" class="navbar-toggle"
+                            data-toggle="collapse"
+                            data-target=".navbar-collapse">
+                        <span class="sr-only">{{ 'menu.toggle_nav'|trans }}</span>
+                        <span class="icon-bar">rereree</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="{{ path('userconfig_index') }}">
+                                <i class="fa fa-gear" aria-hidden="true"></i> User Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('stat_index') }}">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i> Stats
+                            </a>
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+                            <a href="{{ path('homepage') }}">
+                                <i class="fa fa-home" aria-hidden="true"></i> Home
+                            </a>
+                        </li>
+                        {% if app.user %}
+                            <li>
+                                <a href="{{ path('fos_user_security_logout') }}">
+                                    <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+{% endblock %}
+
+{% block body %}{% endblock %}
