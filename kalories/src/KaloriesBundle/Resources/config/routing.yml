@@ -1,0 +1,15 @@
+kalories_meal:
+    resource: "@KaloriesBundle/Resources/config/routing/meal.yml"
+    prefix:   /meal
+
+kalories_userconfig:
+    resource: "@KaloriesBundle/Resources/config/routing/userconfig.yml"
+    prefix:   /userconfig
+
+kalories_stat:
+    resource: "@KaloriesBundle/Resources/config/routing/stat.yml"
+    prefix: /stat
+
+kalories_homepage:
+    path:     /
+    defaults: { _controller: KaloriesBundle:Meal:index }

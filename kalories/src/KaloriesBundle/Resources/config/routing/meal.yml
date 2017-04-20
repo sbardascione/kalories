@@ -1,0 +1,24 @@
+meal_index:
+    path:     /
+    defaults: { _controller: "KaloriesBundle:Meal:index" }
+    methods:  GET
+
+meal_show:
+    path:     /{id}/show
+    defaults: { _controller: "KaloriesBundle:Meal:show" }
+    methods:  GET
+
+meal_new:
+    path:     /new
+    defaults: { _controller: "KaloriesBundle:Meal:new" }
+    methods:  [GET, POST]
+
+meal_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KaloriesBundle:Meal:edit" }
+    methods:  [GET, POST]
+
+meal_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KaloriesBundle:Meal:delete" }
+    methods:  DELETE

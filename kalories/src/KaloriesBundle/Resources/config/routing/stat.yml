@@ -1,0 +1,4 @@
+stat_index:
+    path:     /
+    defaults: { _controller: "KaloriesBundle:Stat:index" }
+    methods:  GET

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Stats</h1>
+    <form  action="{{ path('stat_index') }}">
+        <input type="date" name="date_from" id="date_from">
+        <input type="date" name="date_to" id="date_to">
+        <input type="submit" id="submit" value="Filter">
+    </form>
+    <table>
+        <thead>
+        <tr>
+            <th>Day</th>
+            <th>Calories</th>
+            <th>Result</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for stat in stats %}
+            <tr>
+                <td>{{ stat.day }}</td>
+                <td>{{ stat.day_calories }}</td>
+                <td>{% if stat.day_calories > day_calories %}
+                        <span style="background: #ff0816">
+                              You had enough
+                        </span>
+                    {% else %}
+                        <span style="background: #12ff0d">
+                              Good!
+                        </span>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('meal_new') }}">Create a new meal</a>
+        </li>
+    </ul>
+{% endblock %}

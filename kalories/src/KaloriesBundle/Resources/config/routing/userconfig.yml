@@ -1,0 +1,24 @@
+userconfig_index:
+    path:     /
+    defaults: { _controller: "KaloriesBundle:UserConfig:index" }
+    methods:  GET
+
+userconfig_show:
+    path:     /{id}/show
+    defaults: { _controller: "KaloriesBundle:UserConfig:show" }
+    methods:  GET
+
+userconfig_new:
+    path:     /new
+    defaults: { _controller: "KaloriesBundle:UserConfig:new" }
+    methods:  [GET, POST]
+
+userconfig_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "KaloriesBundle:UserConfig:edit" }
+    methods:  [GET, POST]
+
+userconfig_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "KaloriesBundle:UserConfig:delete" }
+    methods:  DELETE

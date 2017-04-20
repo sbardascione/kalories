@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Userconfigs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Day_calories</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for userConfig in userConfigs %}
+            <tr>
+                <td><a href="{{ path('userconfig_show', { 'id': userConfig.id }) }}">{{ userConfig.id }}</a></td>
+                <td>{{ userConfig.daycalories }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('userconfig_show', { 'id': userConfig.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('userconfig_edit', { 'id': userConfig.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('userconfig_new') }}">Create a new userConfig</a>
+        </li>
+    </ul>
+{% endblock %}
