@@ -1,0 +1,44 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Symfony template
+
+# Email spool folder
+/kalories/app/spool/*
+
+# Cache, session files and logs (Symfony3)
+/kalories/var/cache/*
+/kalories/var/logs/*
+/kalories/var/sessions/*
+!kalories/var/cache/.gitkeep
+!kalories/var/logs/.gitkeep
+!kalories/var/sessions/.gitkeep
+
+# Parameters
+/kalories/app/config/parameters.yml
+
+# Managed by Composer
+/kalories/var/bootstrap.php.cache
+/kalories/bin/*
+!kalories/bin/console
+!kalories/bin/symfony_requirements
+/kalories/vendor/
+
+# Assets and user uploads
+/kalories/web/bundles/
+/kalories/web/uploads/
+
+# PHPUnit
+/kalories/app/phpunit.xml
+/kalories/phpunit.xml
+
+# Build data
+/kalories/build/
+
+# Composer PHAR
+/kalories/composer.phar
+
+# Backup entities generated with doctrine:generate:entities command
+*/Entity/*~
+
+/docker/.data
+/.idea
+
